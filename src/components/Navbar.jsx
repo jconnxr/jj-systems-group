@@ -29,7 +29,7 @@ const navItems = [
     children: [
       { label: 'Local Service Businesses', path: '/industries/local-service-businesses' },
       { label: 'Professional Services', path: '/industries/professional-services' },
-      { label: 'Retail & Drive-Thru', path: '/industries/retail-drive-thru' },
+      { label: 'Operations-Heavy Businesses', path: '/industries/operations-heavy-businesses' },
       { label: 'Franchise & Multi-Location', path: '/industries/franchise-multi-location' },
     ],
   },

@@ -13,7 +13,7 @@ import VisibilityPresence from './pages/what-we-do/VisibilityPresence'
 import OngoingOptimization from './pages/what-we-do/OngoingOptimization'
 import LocalServiceBusinesses from './pages/industries/LocalServiceBusinesses'
 import ProfessionalServices from './pages/industries/ProfessionalServices'
-import RetailDriveThru from './pages/industries/RetailDriveThru'
+import OperationsHeavyBusinesses from './pages/industries/OperationsHeavyBusinesses'
 import FranchiseMultiLocation from './pages/industries/FranchiseMultiLocation'
 import Process from './pages/Process'
 import CaseStudies from './pages/CaseStudies'
@@ -35,7 +35,7 @@ export default function App() {
         <Route path="/what-we-do/ongoing-optimization" element={<OngoingOptimization />} />
         <Route path="/industries/local-service-businesses" element={<LocalServiceBusinesses />} />
         <Route path="/industries/professional-services" element={<ProfessionalServices />} />
-        <Route path="/industries/retail-drive-thru" element={<RetailDriveThru />} />
+        <Route path="/industries/operations-heavy-businesses" element={<OperationsHeavyBusinesses />} />
         <Route path="/industries/franchise-multi-location" element={<FranchiseMultiLocation />} />
         <Route path="/process" element={<Process />} />
         <Route path="/case-studies" element={<CaseStudies />} />

@@ -42,9 +42,9 @@ export default function Home() {
             href="/industries/professional-services"
           />
           <IndustryCard
-            title="Retail & Drive-Thru"
-            description="Quick-service, retail, and multi-location operations."
-            href="/industries/retail-drive-thru"
+            title="Operations-Heavy Businesses"
+            description="Manufacturing, logistics, distribution, and field operations where systems must scale."
+            href="/industries/operations-heavy-businesses"
           />
           <IndustryCard
             title="Franchise & Multi-Location"
