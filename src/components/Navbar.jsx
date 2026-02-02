@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-import { START_WITH_CLARITY_URL } from '../constants'
 import lockup from '../assets/logos/jj-lockup copy.png'
 import mark from '../assets/logos/jj-mark copy.png'
 
@@ -114,17 +113,12 @@ export default function Navbar() {
                   )}
                 </div>
               ) : item.path === '/start-with-clarity' ? (
-                <a
+                <span
                   key={item.path}
-                  href={START_WITH_CLARITY_URL}
-                  className={`px-3 py-2 text-sm rounded hover:bg-brand-light transition-colors ${
-                    isActive(item.path, location)
-                      ? 'text-brand-accent font-medium'
-                      : 'text-brand-muted hover:text-brand-dark'
-                  }`}
+                  className="px-3 py-2 text-sm text-brand-muted cursor-default"
                 >
                   {item.label}
-                </a>
+                </span>
               ) : (
                 <Link
                   key={item.path}
@@ -192,18 +186,12 @@ export default function Navbar() {
                     ))}
                   </div>
                 ) : item.path === '/start-with-clarity' ? (
-                  <a
+                  <span
                     key={item.path}
-                    href={START_WITH_CLARITY_URL}
-                    onClick={() => setMobileOpen(false)}
-                    className={`px-3 py-2 text-sm rounded ${
-                      isActive(item.path, location)
-                        ? 'text-brand-accent font-medium bg-brand-light'
-                        : 'text-brand-muted'
-                    }`}
+                    className="px-3 py-2 text-sm text-brand-muted cursor-default"
                   >
                     {item.label}
-                  </a>
+                  </span>
                 ) : (
                   <Link
                     key={item.path}

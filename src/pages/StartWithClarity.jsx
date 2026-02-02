@@ -1,6 +1,5 @@
 import Hero from '../components/Hero'
 import Section from '../components/Section'
-import { START_WITH_CLARITY_URL } from '../constants'
 
 export default function StartWithClarity() {
   return (
@@ -28,12 +27,13 @@ export default function StartWithClarity() {
           <p className="text-sm text-brand-muted mb-4">
             (You'll be guided step-by-step. No commitment required.)
           </p>
-          <a
-            href={START_WITH_CLARITY_URL}
-            className="inline-flex justify-center px-6 py-3 text-base font-medium text-white bg-brand-accent rounded hover:opacity-90 transition-opacity"
+          <button
+            type="button"
+            disabled
+            className="inline-flex justify-center px-6 py-3 text-base font-medium text-brand-muted bg-brand-light border border-brand-dark/10 rounded cursor-not-allowed"
           >
             Continue to the clarity process
-          </a>
+          </button>
         </div>
       </Section>
     </>

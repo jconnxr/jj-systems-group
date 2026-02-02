@@ -5,7 +5,6 @@ import FounderCard from '../components/FounderCard'
 import IndustryCard from '../components/IndustryCard'
 import { Link } from 'react-router-dom'
 
-import { START_WITH_CLARITY_URL } from '../constants'
 import johnConner from '../assets/founders/john-conner.jpg'
 import jacobForeman from '../assets/founders/jacob-foreman.jpg'
 
@@ -69,12 +68,13 @@ export default function Home() {
           </div>
         </div>
         <div className="mt-10">
-          <a
-            href={START_WITH_CLARITY_URL}
-            className="inline-flex justify-center px-6 py-3 text-base font-medium text-white bg-brand-accent rounded hover:opacity-90 transition-opacity"
+          <button
+            type="button"
+            disabled
+            className="inline-flex justify-center px-6 py-3 text-base font-medium text-brand-muted bg-brand-light border border-brand-dark/10 rounded cursor-not-allowed"
           >
             Begin the clarity process
-          </a>
+          </button>
         </div>
       </Section>
       <Section
