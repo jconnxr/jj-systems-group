@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-import mark from '../assets/logos/jj-mark.png'
+import mark from '../assets/logos/jj-mark copy.png'
 
 const footerLinks = [
   {
@@ -65,7 +65,7 @@ export default function Footer() {
           ))}
         </div>
         <div className="mt-10 pt-8 border-t border-brand-dark/10 text-sm text-brand-muted">
-          &copy; {new Date().getFullYear()} J&J Systems Group. All rights reserved.
+          &copy; 2020 J&J Systems Group. All rights reserved.
         </div>
       </div>
     </footer>

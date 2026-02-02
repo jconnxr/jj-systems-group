@@ -8,6 +8,7 @@ export default function CTA({
   secondaryText,
   secondaryHref,
 }) {
+  const primaryIsExternal = primaryHref?.startsWith('http')
   return (
     <section className="py-16 sm:py-20 bg-brand-accent text-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -16,12 +17,21 @@ export default function CTA({
           <p className="mt-4 text-lg text-white/90 leading-relaxed">{description}</p>
         )}
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            to={primaryHref}
-            className="inline-flex justify-center px-6 py-3 text-base font-medium text-brand-accent bg-white rounded hover:bg-brand-light transition-colors"
-          >
-            {primaryText}
-          </Link>
+          {primaryIsExternal ? (
+            <a
+              href={primaryHref}
+              className="inline-flex justify-center px-6 py-3 text-base font-medium text-brand-accent bg-white rounded hover:bg-brand-light transition-colors"
+            >
+              {primaryText}
+            </a>
+          ) : (
+            <Link
+              to={primaryHref}
+              className="inline-flex justify-center px-6 py-3 text-base font-medium text-brand-accent bg-white rounded hover:bg-brand-light transition-colors"
+            >
+              {primaryText}
+            </Link>
+          )}
           {secondaryText && (
             <Link
               to={secondaryHref}

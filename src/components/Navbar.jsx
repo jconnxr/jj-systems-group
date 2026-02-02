@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-import lockup from '../assets/logos/jj-lockup.png'
-import mark from '../assets/logos/jj-mark.png'
+import { START_WITH_CLARITY_URL } from '../constants'
+import lockup from '../assets/logos/jj-lockup copy.png'
+import mark from '../assets/logos/jj-mark copy.png'
 
 const navItems = [
   { label: 'Home', path: '/' },
@@ -34,6 +35,7 @@ const navItems = [
     ],
   },
   { label: 'Process', path: '/process' },
+  { label: 'Start With Clarity', path: '/start-with-clarity' },
   { label: 'Case Studies', path: '/case-studies' },
   {
     label: 'Contact',
@@ -56,9 +58,12 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-brand-light">
-      <nav className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center shrink-0">
+      <nav className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 w-full">
+          <Link
+            to="/"
+            className="flex items-center shrink-0 py-2 px-3 rounded-lg bg-gradient-to-r from-brand-light/60 via-brand-light/30 to-transparent"
+          >
             <img
               src={lockup}
               alt="J&J Systems Group"
@@ -72,7 +77,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex flex-1 items-center justify-evenly mx-4">
             {navItems.map((item) =>
               item.children ? (
                 <div
@@ -108,6 +113,18 @@ export default function Navbar() {
                     </div>
                   )}
                 </div>
+              ) : item.path === '/start-with-clarity' ? (
+                <a
+                  key={item.path}
+                  href={START_WITH_CLARITY_URL}
+                  className={`px-3 py-2 text-sm rounded hover:bg-brand-light transition-colors ${
+                    isActive(item.path, location)
+                      ? 'text-brand-accent font-medium'
+                      : 'text-brand-muted hover:text-brand-dark'
+                  }`}
+                >
+                  {item.label}
+                </a>
               ) : (
                 <Link
                   key={item.path}
@@ -122,13 +139,13 @@ export default function Navbar() {
                 </Link>
               )
             )}
-            <Link
-              to="/contact/book-a-meeting"
-              className="ml-2 px-4 py-2 text-sm font-medium text-white bg-brand-accent rounded hover:opacity-90 transition-opacity"
-            >
-              Book a Meeting
-            </Link>
           </div>
+          <Link
+            to="/contact/book-a-meeting"
+            className="hidden lg:inline-flex shrink-0 px-4 py-2 text-sm font-medium text-white bg-brand-accent rounded hover:opacity-90 transition-opacity"
+          >
+            Book a Meeting
+          </Link>
 
           {/* Mobile menu button */}
           <button
@@ -174,6 +191,19 @@ export default function Navbar() {
                       </Link>
                     ))}
                   </div>
+                ) : item.path === '/start-with-clarity' ? (
+                  <a
+                    key={item.path}
+                    href={START_WITH_CLARITY_URL}
+                    onClick={() => setMobileOpen(false)}
+                    className={`px-3 py-2 text-sm rounded ${
+                      isActive(item.path, location)
+                        ? 'text-brand-accent font-medium bg-brand-light'
+                        : 'text-brand-muted'
+                    }`}
+                  >
+                    {item.label}
+                  </a>
                 ) : (
                   <Link
                     key={item.path}
@@ -192,7 +222,7 @@ export default function Navbar() {
               <Link
                 to="/contact/book-a-meeting"
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 mx-3 py-2 text-center text-sm font-medium text-white bg-brand-accent rounded"
+                className="mt-2 mx-3 py-2 text-center text-sm font-medium text-white bg-brand-accent rounded block"
               >
                 Book a Meeting
               </Link>

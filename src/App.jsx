@@ -16,6 +16,7 @@ import ProfessionalServices from './pages/industries/ProfessionalServices'
 import OperationsHeavyBusinesses from './pages/industries/OperationsHeavyBusinesses'
 import FranchiseMultiLocation from './pages/industries/FranchiseMultiLocation'
 import Process from './pages/Process'
+import StartWithClarity from './pages/StartWithClarity'
 import CaseStudies from './pages/CaseStudies'
 import BookMeeting from './pages/contact/BookMeeting'
 import GeneralInquiry from './pages/contact/GeneralInquiry'
@@ -38,6 +39,7 @@ export default function App() {
         <Route path="/industries/operations-heavy-businesses" element={<OperationsHeavyBusinesses />} />
         <Route path="/industries/franchise-multi-location" element={<FranchiseMultiLocation />} />
         <Route path="/process" element={<Process />} />
+        <Route path="/start-with-clarity" element={<StartWithClarity />} />
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/contact/book-a-meeting" element={<BookMeeting />} />
         <Route path="/contact/general-inquiry" element={<GeneralInquiry />} />

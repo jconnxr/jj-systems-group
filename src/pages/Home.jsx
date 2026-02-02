@@ -5,6 +5,7 @@ import FounderCard from '../components/FounderCard'
 import IndustryCard from '../components/IndustryCard'
 import { Link } from 'react-router-dom'
 
+import { START_WITH_CLARITY_URL } from '../constants'
 import johnConner from '../assets/founders/john-conner.jpg'
 import jacobForeman from '../assets/founders/jacob-foreman.jpg'
 
@@ -24,6 +25,57 @@ export default function Home() {
         <p className="text-brand-muted leading-relaxed max-w-2xl">
           We do not apply generic playbooks. We start with your context, your goals, and the gaps that limit progress—then we build systems that fit and that you can sustain.
         </p>
+      </Section>
+      <Section
+        title="Start With Clarity"
+        subtitle="A guided starting point for businesses that aren't ready for full systems work yet — but want to move forward intelligently."
+        className="bg-brand-light/30"
+      >
+        <div className="max-w-2xl space-y-6 text-brand-muted leading-relaxed">
+          <p>
+            Many businesses don't need more tools.
+            They need clarity on what actually matters next.
+          </p>
+          <p>
+            Start With Clarity is a guided process that helps you understand:
+          </p>
+          <ul className="list-disc list-inside space-y-2 pl-2">
+            <li>What kind of website foundation your business actually needs</li>
+            <li>What systems matter now vs later</li>
+            <li>Where simplicity helps — and where complexity actually makes sense</li>
+          </ul>
+          <p>This is not a commitment. It's a starting point.</p>
+        </div>
+        <div className="mt-10 grid sm:grid-cols-2 gap-8 max-w-3xl">
+          <div>
+            <h3 className="text-sm font-semibold text-brand-dark uppercase tracking-wider mb-3">
+              This is for
+            </h3>
+            <ul className="space-y-2 text-brand-muted text-sm leading-relaxed">
+              <li>Early-stage or growing businesses</li>
+              <li>Owners who want clarity before investing in systems</li>
+              <li>Teams unsure what to prioritize next</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold text-brand-dark uppercase tracking-wider mb-3">
+              This is not for
+            </h3>
+            <ul className="space-y-2 text-brand-muted text-sm leading-relaxed">
+              <li>Businesses ready for full systems installs</li>
+              <li>High-complexity operations needing immediate automation</li>
+              <li>Companies already executing at scale</li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-10">
+          <a
+            href={START_WITH_CLARITY_URL}
+            className="inline-flex justify-center px-6 py-3 text-base font-medium text-white bg-brand-accent rounded hover:opacity-90 transition-opacity"
+          >
+            Begin the clarity process
+          </a>
+        </div>
       </Section>
       <Section
         title="Who we work with"
