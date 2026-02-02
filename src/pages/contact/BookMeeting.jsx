@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { CRM_LEADS_URL } from '../../constants'
 
-// CRM endpoint: leads are created here before redirecting to Calendly.
-const CRM_LEADS_URL = 'https://jnj-native-crm-production.up.railway.app/leads'
 // After successful CRM submission, user is sent to Calendly to pick a time.
 const CALENDLY_REDIRECT_URL = 'https://calendly.com/jnjsystems/working-conversation'
 
